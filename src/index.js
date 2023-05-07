@@ -12,8 +12,9 @@ app.use('/apis', userRouter)
 app.use('/apis', greenHouseRouter)
 const PORT = process.env.PORT || 3000
 
-const MONGODB_URL = 'mongodb://127.0.0.1:27017/greenHouse-backend'
-// const MONGODB_URL = 'mongodb+srv://ahmed-eid-dafter:eid199963@cluster0.h575og5.mongodb.net/?retryWrites=true&w=majority'
+// const MONGODB_URL = 'mongodb://127.0.0.1:27017/greenHouse-backend'
+// const MONGODB_URL = 'mongodb+srv://<username>:<passwoed>@cluster0.h575og5.mongodb.net/?retryWrites=true&w=majority'
+const MONGODB_URL = 'mongodb+srv://greenhouse:eid199963@cluster0.h575og5.mongodb.net/?retryWrites=true&w=majority'
 
 mongoose.connect(MONGODB_URL)
     .then(() => app.listen(PORT, () => console.log(`server is running on ${PORT} port`)))
